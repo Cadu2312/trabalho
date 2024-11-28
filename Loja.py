@@ -51,7 +51,7 @@ print("\n")
 
 print("Programa aberto!")
 sistema = 9
-
+#Inicio do codigo
 while sistema != 0:
     cont = 1
     print("\nAções disponvieis pelos clientes")
@@ -65,6 +65,7 @@ while sistema != 0:
         print("Ação inexistente")
     #Venda 
     if sistema == 1:
+        #Calculo e amostra dos carros
         print("12 porcento de desconto na venda! ")
         print("Carros que a empresa esta comprando")
         for i in fipe:
@@ -76,6 +77,7 @@ while sistema != 0:
             vender = str(input("Digite o nome do carro que o cliente deseja vender: "))
             cont = 1
 
+            #Verificação se carro existe
             if cont != 0:
                 for i in fipe:
                     x= vender in fipe[i]
@@ -113,6 +115,7 @@ while sistema != 0:
             print(f"\nO valor ficara em {aluguelpreco}.")
             cont = int(input("\n1-Alugar carro escolhido \n0-Voltar ao Menu"))
 
+            #Verificação se carro existe
             if cont != 0:
                 for i in fipe:
                     x= alugar in fipe[i]
@@ -122,7 +125,7 @@ while sistema != 0:
                     print("Carro não encontrado!\n")
                     cont = 0
 
-
+            #Aluguel do carro
             if cont == 1:
                 for i in fipe:
                     if alugar == fipe[i] and disponivel[i] == "Disponivel":
@@ -137,6 +140,7 @@ while sistema != 0:
     #Comprar carro
     if sistema == 3:
         print("Carros disponvieis esta comprando")
+        #Amostra dos carros disponiveis
         for i in fipe:
             if disponivel[i] == "Disponivel":
                 o = fipe2[i]+(fipe2[i]*25)/100
@@ -146,6 +150,7 @@ while sistema != 0:
             comprar = str(input("Qual carro gostaria de comprar: "))
             cont = int(input("\n1-Comprar carro escolhido \n0-Voltar ao Menu"))
 
+            #Verificação se carro existe
             if cont != 0:
                 for i in fipe:
                     x= comprar in fipe[i]
@@ -155,7 +160,7 @@ while sistema != 0:
                     print("Carro não encontrado!\n")
                     cont = 0
 
-
+            #Compra do carro
             if cont == 1:
                 for i in fipe:
                     if comprar == fipe[i] and disponivel[i] == "Disponivel":
